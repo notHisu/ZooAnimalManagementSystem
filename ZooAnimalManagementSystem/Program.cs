@@ -9,6 +9,7 @@
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             Lion lion = new Lion("Lion", 5);
+            //Console.WriteLine("Lion's name is " + lion.Name);
             lion.ShowInfo();
             lion.MakeSound();
 

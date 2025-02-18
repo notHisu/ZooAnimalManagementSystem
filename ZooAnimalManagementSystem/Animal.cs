@@ -8,24 +8,45 @@ namespace ZooAnimalManagementSystem
 {
     public abstract class Animal
     {
-        private string Name { get; set; }
-        private int Age { get; set; }
-        private string Species { get; set; }
+        private string name;
+        private int age;
+        private string species;
+
+        public string Name
+
+        { get { return name; }
+            set { name = value; }
+        }
+
+        public int Age
+
+        {
+            get { return age; }
+            set { age = value; }
+        }
+
+        public string Species
+
+        {
+            get { return species; }
+            set { species = value; }
+        }
+
 
         public Animal(string name, int age, string species)
         {
-            this.Name = name;
-            this.Age = age;
-            this.Species = species;
+            this.name = name;
+            this.age = age;
+            this.species = species;
         }
 
         public abstract void MakeSound();
 
         public void ShowInfo()
         {
-            Console.WriteLine($"Name: {Name}");
-            Console.WriteLine($"Age: {Age}");
-            Console.WriteLine($"Species: {Species}");
+            Console.WriteLine($"Name: {name}");
+            Console.WriteLine($"Age: {age}");
+            Console.WriteLine($"Species: {species}");
         }
     }
 }
