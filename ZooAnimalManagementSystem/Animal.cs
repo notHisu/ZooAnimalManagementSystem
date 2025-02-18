@@ -49,5 +49,14 @@ namespace ZooAnimalManagementSystem
             Console.WriteLine($"Species: {species}");
 
         }
+
+    }
+
+    public static class AnimalExtensions
+    {
+        public static string GetAnimalType(this Animal animal)
+        {
+            return animal.GetType().Name;
+        }
     }
 }
