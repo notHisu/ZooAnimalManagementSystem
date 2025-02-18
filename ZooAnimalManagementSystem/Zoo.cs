@@ -22,14 +22,14 @@ namespace ZooAnimalManagementSystem
         }
 
         // Define the event
-        public event EventHandler<AnimalEventArgs> OnAnimalAdded;
+        public event EventHandler<Animal> OnAnimalAdded;
 
         public void AddAnimal(Animal animal)
         {
             animals.Add(animal);
 
             // Raise the event
-            OnAnimalAdded?.Invoke(this, new AnimalEventArgs { Animal = animal });
+            OnAnimalAdded?.Invoke(this, animal);
 
         }
         public void ShowAnimals()
@@ -52,8 +52,4 @@ namespace ZooAnimalManagementSystem
 
     }
 
-    public class AnimalEventArgs : EventArgs
-    {
-        public Animal Animal { get; set; }
-    }
 }

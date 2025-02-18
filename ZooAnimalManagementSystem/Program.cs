@@ -12,9 +12,9 @@
 
 
             // Subscribe to the event
-            zoo.OnAnimalAdded += (sender, e) =>
+            zoo.OnAnimalAdded += (sender, animal) =>
             {
-                Console.WriteLine("New animal added: " + e.Animal.Name);
+                Console.WriteLine("New animal added: " + animal.Name);
             };
 
             zoo.AddAnimal(new Lion("Ura", 5));
