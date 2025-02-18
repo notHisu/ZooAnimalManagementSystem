@@ -10,6 +10,13 @@
 
             Zoo zoo = new Zoo();
 
+
+            // Subscribe to the event
+            zoo.OnAnimalAdded += (sender, e) =>
+            {
+                Console.WriteLine("New animal added: " + e.Animal.Name);
+            };
+
             zoo.AddAnimal(new Lion("Ura", 5));
             zoo.AddAnimal(new Lion("Mufasa", 7));
             zoo.AddAnimal(new Lion("Simba", 3));
@@ -38,6 +45,12 @@
                 animal.ShowInfo();
                 Console.WriteLine();
             }
+
+            foreach (var animal in zoo.Animals)
+            {
+                Console.WriteLine(animal.GetAnimalType());
+            }
+
 
             /*
             Lion lion = new Lion("Ura", 5);

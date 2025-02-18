@@ -20,9 +20,17 @@ namespace ZooAnimalManagementSystem
         {
             animals = new List<Animal>();
         }
+
+        // Define the event
+        public event EventHandler<AnimalEventArgs> OnAnimalAdded;
+
         public void AddAnimal(Animal animal)
         {
             animals.Add(animal);
+
+            // Raise the event
+            OnAnimalAdded?.Invoke(this, new AnimalEventArgs { Animal = animal });
+
         }
         public void ShowAnimals()
         {
@@ -42,5 +50,10 @@ namespace ZooAnimalManagementSystem
             return animals.Where(criteria);
         }
 
+    }
+
+    public class AnimalEventArgs : EventArgs
+    {
+        public Animal Animal { get; set; }
     }
 }
