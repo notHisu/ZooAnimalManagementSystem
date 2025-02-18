@@ -13,7 +13,7 @@ namespace ZooAnimalManagementSystem
         }
         public override void MakeSound()
         {
-            Console.WriteLine("Roaaaarrrr!");
+            Console.WriteLine("Roaaaarrrr!\n");
         }
     }
 }

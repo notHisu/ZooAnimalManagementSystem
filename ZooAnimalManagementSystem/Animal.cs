@@ -47,6 +47,7 @@ namespace ZooAnimalManagementSystem
             Console.WriteLine($"Name: {name}");
             Console.WriteLine($"Age: {age}");
             Console.WriteLine($"Species: {species}");
+
         }
     }
 }

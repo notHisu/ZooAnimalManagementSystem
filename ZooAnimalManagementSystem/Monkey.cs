@@ -11,7 +11,7 @@ namespace ZooAnimalManagementSystem
         public Monkey(string name, int age) : base(name, age, "Monkey") { }
         public override void MakeSound()
         {
-            Console.WriteLine("Oooh Oooh Gahh Gahhh!");
+            Console.WriteLine("Oooh Oooh Gahh Gahhh!\n");
         }
     }
 

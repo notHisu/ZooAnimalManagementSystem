@@ -11,7 +11,7 @@ namespace ZooAnimalManagementSystem
         public Elephant(string name, int age) : base(name, age, "Elephant") { }
         public override void MakeSound()
         {
-            Console.WriteLine("Con voi kêu làm sao ta?");
+            Console.WriteLine("Con voi kêu làm sao ta?\n");
         }
     }
 }
